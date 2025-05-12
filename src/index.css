@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;700&display=swap');
+
+:root {
+  --color-bg-primary: #0D1117;
+  --color-bg-secondary: #161B22;
+  --color-bg-tertiary: #21262D;
+  --color-text-primary: #F0F6FC;
+  --color-text-secondary: #8B949E;
+  --color-accent-blue: #58A6FF;
+  --color-accent-green: #3FB950;
+  --color-accent-red: #F85149;
+  --color-accent-yellow: #F0883E;
+}
+
+body {
+  @apply bg-[var(--color-bg-primary)] text-[var(--color-text-primary)];
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.terminal {
+  font-family: 'JetBrains Mono', monospace;
+  @apply rounded-md bg-[var(--color-bg-tertiary)] p-3 text-sm;
+}
+
+.glowing-border {
+  box-shadow: 0 0 5px var(--color-accent-blue);
+}
+
+.glowing-text {
+  text-shadow: 0 0 5px var(--color-accent-blue);
+}
+
+.grid-pattern {
+  background-image: 
+    linear-gradient(rgba(88, 166, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(88, 166, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.status-active {
+  animation: pulse 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-tertiary);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-secondary);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent-blue);
+}
+
+/* Map custom styling */
+.custom-map .leaflet-control {
+  @apply bg-[var(--color-bg-secondary)] text-[var(--color-text-primary)] border-[var(--color-bg-tertiary)];
+}
+
+.custom-map .leaflet-control-attribution {
+  @apply bg-[var(--color-bg-secondary)] text-[var(--color-text-secondary)] text-xs;
+}
+
+.drone-marker {
+  position: relative;
+}
+
+.drone-marker::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-accent-blue);
+  animation: pulse 2s infinite;
+}
+
+.panel {
+  @apply bg-[var(--color-bg-secondary)] rounded-lg border border-[var(--color-bg-tertiary)] overflow-hidden;
+}
+
+.panel-header {
+  @apply bg-[var(--color-bg-tertiary)] px-4 py-2 flex justify-between items-center;
+}
+
+.panel-body {
+  @apply p-4;
+}
+
+.cmd-line {
+  @apply flex items-center;
+}
+
+.cmd-line::before {
+  content: '>';
+  @apply text-[var(--color-accent-blue)] mr-2;
+}
+
+.cmd-input {
+  @apply bg-transparent border-none outline-none w-full;
+}
