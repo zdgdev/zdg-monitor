@@ -16,8 +16,8 @@ export const mockDrones: DroneData[] = [
     videoFeed: 'https://static.videezy.com/system/resources/previews/000/044/479/original/Flying8.mp4'
   },
   {
-    id: 'drone-02',
-    name: 'Hunter Beta',
+    id: 'UAV-3023PM02',
+    name: 'Elang Hitam',
     model: 'Autel EVO II',
     status: 'warning',
     battery: 32,
@@ -29,8 +29,8 @@ export const mockDrones: DroneData[] = [
     videoFeed: 'https://static.videezy.com/system/resources/previews/000/021/497/original/Drone-view-of-the-beach-and-the-sea.mp4'
   },
   {
-    id: 'drone-0SB94ZA81',
-    name: 'Sky Internal',
+    id: 'UAV-0SB94ZA81',
+    name: 'UAV DID 3.11',
     model: 'Skydio 2',
     status: 'active',
     battery: 91,
@@ -42,8 +42,8 @@ export const mockDrones: DroneData[] = [
     videoFeed: 'https://static.videezy.com/system/resources/previews/000/005/828/original/Drone_2.mp4'
   },
   {
-    id: 'drone-0030210491',
-    name: 'BR4N1',
+    id: 'UAV-LS03210169',
+    name: 'LAPAN LSU-03',
     model: 'Parrot Anafi',
     status: 'inactive',
     battery: 0,
